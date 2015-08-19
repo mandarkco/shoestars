@@ -1,0 +1,23 @@
+section.Tools.row
+					section.Tools-item.col-xs-12.col-sm-3.col-md-3.col-lg-2
+						button.btn-read Listar
+
+					section.Tools-item.col-xs-12.col-sm-3.col-md-3.col-lg-2
+						button.btn-read Agregar
+
+				section.row
+					section.col-xs-10.col-sm-10.col-md-10.col-lg-10
+						table.table.table-striped
+							thead
+								tr
+									
+									th Nombre	
+
+							tbody
+								tr(ng-repeat="c in categorias")
+									
+									th [[c.nombre]]
+									th
+										btn.btn.btn-warning Editar
+									th
+										btn.btn.btn-danger Eliminar

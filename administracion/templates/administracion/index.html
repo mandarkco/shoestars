@@ -1,0 +1,58 @@
+<!DOCTYPE html5>{% load staticfiles %}
+<html ng-app="app">
+  <head>
+    <meta name="viewport" content="width=device-width"/>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <link href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet"/>
+    <link rel="stylesheet" href="{% static 'administracion/style.css' %}"/>
+    <style type="text/css">.row{margin-right: 0px !important; margin-left: 0px !important; }</style>
+    <style type="text/css">.margin-default{margin-right: -15px !important;margin-left:-15px !important; }</style>
+  </head>
+  <body>
+    
+    <section class="MainContent row">
+      <section class="LeftContent col-xs-12 col-sm-4 col-md-4 col-lg-3">
+        <section class="row margin-default">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 logo">
+           <span ><img src="https://www.yoamoloszapatos.com/images/logo.png" class="TopBar-logo float-left"/>
+          <h2 class="float-left">Administracion</h2></span>
+          </div>
+          <div class="LeftContent-item col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h3> <a href="#categorias">Categorias</a></h3>
+          </div>
+          <div class="LeftContent-item col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h3> <a href="#productos">Productos</a></h3>
+          </div>
+          <div class="LeftContent-item col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h3> <a>Sliders</a></h3>
+          </div>
+          <div class="LeftContent-item col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h3> <a>Vendedores</a></h3>
+          </div>
+          <div class="LeftContent-item col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h3> <a>Clientes</a></h3>
+          </div>
+          <div class="LeftContent-item col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h3> <a>Pagos</a></h3>
+          </div>
+          <div class="LeftContent-item col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h3> <a>Envios</a></h3>
+          </div>
+          <div class="LeftContent-item col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h3><a>Reportes</a></h3>
+          </div>
+          <div class="LeftContent-item col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h3> <a>Mi Cuenta</a></h3>
+          </div>
+        </section>
+      </section>
+      <section ng-view="" class="RightContent col-xs-12 col-sm-8 col-md-8 col-lg-9"></section>
+    </section>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'assets/angular.js' %}"></script>
+  <script type="text/javascript" src="{% static 'assets/angular-route.js' %}">		</script>
+  <script type="text/javascript" src="{% static 'administracion/main.js' %}">				</script>
+  <script type="text/javascript" src="{% static 'assets/services.js' %}"></script>
+</html>

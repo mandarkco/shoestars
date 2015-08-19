@@ -1,0 +1,7 @@
+{
+	"producto":["id","nombre", "descripcion", "categoria", "precio", "peso", "estado",
+		{
+			"example": {"nombre":"zapato1", "descripcion": "zapato", "categoria":"pumps", "precio": "200", "peso": "100", "estado": "1"}
+		}],
+
+}

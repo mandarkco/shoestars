@@ -1,0 +1,70 @@
+doctype html5
+{% load staticfiles %}
+html(ng-app="app")
+	head
+		meta(name="viewport", content="width=device-width")
+		meta(name="viewport", content="initial-scale=1, maximum-scale=1, user-scalable=no")
+		link(href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}",rel="stylesheet")
+		link(rel='stylesheet', href="{% static 'administracion/style.css' %}")
+		style(type='text/css') .row{margin-right: 0px !important; margin-left: 0px !important; }
+		style(type='text/css') .margin-default{margin-right: -15px !important;margin-left:-15px !important; }
+	body
+		section.TopBar.row
+			div.col-xs-12.col-sm-12.col-md-12.col-lg-12
+				span
+					img(src="https://www.yoamoloszapatos.com/images/logo.png").TopBar-logo.float-left
+					h2.float-left Administracion
+
+		
+		section.MainContent.row
+			section.LeftContent.col-xs-12.col-sm-4.col-md-4.col-lg-3
+				
+				section.row.margin-default
+					
+
+					div.LeftContent-item.col-xs-12.col-sm-12.col-md-12.col-lg-12
+						h3 
+							a(href="#categorias") Categorias
+
+					div.LeftContent-item.col-xs-12.col-sm-12.col-md-12.col-lg-12
+						h3 
+							a Productos
+
+					div.LeftContent-item.col-xs-12.col-sm-12.col-md-12.col-lg-12
+						h3 
+							a Sliders
+
+					div.LeftContent-item.col-xs-12.col-sm-12.col-md-12.col-lg-12
+						h3 
+							a Vendedores
+
+					div.LeftContent-item.col-xs-12.col-sm-12.col-md-12.col-lg-12
+						h3 
+							a Clientes
+
+					div.LeftContent-item.col-xs-12.col-sm-12.col-md-12.col-lg-12
+						h3 
+							a Pagos
+
+					div.LeftContent-item.col-xs-12.col-sm-12.col-md-12.col-lg-12
+						h3 
+							a Envios
+
+					div.LeftContent-item.col-xs-12.col-sm-12.col-md-12.col-lg-12
+						h3
+							a Reportes
+
+					div.LeftContent-item.col-xs-12.col-sm-12.col-md-12.col-lg-12
+						h3 
+							a Mi Cuenta
+				
+			section.RightContent.col-xs-12.col-sm-8.col-md-8.col-lg-9(ng-view="")
+				
+					
+	script(type="text/javascript",src="{% static 'assets/angular.js' %}")
+	script(type="text/javascript",src="{% static 'assets/angular-route.js' %}")		
+	script(type="text/javascript",src="{% static 'administracion/main.js' %}")				
+					
+
+
+

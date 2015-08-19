@@ -1,0 +1,91 @@
+<section class="row">
+<form class="col-xs-12 col-sm-12 col-md-5 col-lg-5 form-inline" >
+<label for="exampleInputEmail1"><h2>Agregar Producto</h2></label>
+  <div class="form-group inline">
+    <label for="exampleInputEmail1"><h3>Categoria</h3></label>
+    <select>
+	  <option value="[[c.nombre]]" ng-repeat="c in categorias" id="categoria">[[c.nombre]]</option>	  
+	</select>   
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1"><h3>Nombre</h3></label>
+    <input type="input" class="form-control" id="nombre" placeholder="Digite el nombre" required>    
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1"><h3>Url Imagen</h3></label>
+    <input type="input" class="form-control" id="imagen" placeholder="Digite la url" required>    
+  </div>
+
+
+  <div class="form-group">
+    <label for="exampleInputEmail1"><h3>Precio</h3></label>
+    <input type="input" class="form-control" id="precio" placeholder="Digite el precio" required>    
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1"><h3>Peso</h3></label>
+    <input type="input" class="form-control" id="peso" placeholder="Digite el peso" required>    
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1"><h3>Descripcion</h3></label>
+    <textarea  class="form-control" id="descripcion" placeholder="Digite la descripcion" required>    
+    </textarea>
+  </div>
+  <br>
+  <button type="submit" class="btn btn-success" ng-click="agregar_producto()">Agregar</button>
+</form>
+</section>
+
+
+<h3>Categorias</h3>
+<section class="row" ng-repeat="c in categorias">
+<h2>[[c.nombre]]</h2>
+  <section class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="p in c.productos">
+          <th>[[p.nombre]]</th>
+          <th>
+            <btn class="btn btn-warning" data-toggle="modal" data-target="#editar" data-toggle="tooltip" data-placement="bottom" title="editar" ng-click='set_atributos(c.id, c.nombre)'>Editar</btn>
+          </th>
+          <th>
+            <btn class="btn btn-danger" ng-click="eliminar_categoria(c.id)">Eliminar</btn>
+          </th>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</section>
+
+
+
+
+
+<div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Editar Categoria</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            
+            <input type="input" class="form-control" id="update-nombre" ng-model="update_nombre" placeholder="Nombre"  required>
+          </div>
+          
+          <button type="submit" class="btn btn-success" ng-click="actualizar_categoria()">Aceptar</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+       
+      </div>
+    </div>
+  </div>
+</div>

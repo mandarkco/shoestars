@@ -1,0 +1,65 @@
+
+
+
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel"> 
+	<!-- Indicators -->
+	
+	<ol class="carousel-indicators">
+		<li data-target="#myCarousel" data-slide-to="[[$index]]" class="[[i.clase]]" ng-repeat="i in items"></li>
+		
+	</ol>
+	<div class="carousel-inner">
+		<div class="item [[i.clase]]" ng-repeat="i in items"> 
+			<img src="[[i.img]]" style="width:100%" alt="First slide">
+			<div class="container">
+				<div class="carousel-caption">
+					<h1>[[i.titulo]]</h1>
+					<p>[[i.subtitulo]]</p>
+					<p><a class="btn btn-lg btn-primary" href="#" role="button">[[i.text_btn]]</a></p>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	
+	<a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a> 
+</div>
+
+
+<!-- Ejemplo controlador
+
+app.controller('slide_incluir_producto', ['$scope', 'defaultService', function ($scope, defaultService) {
+
+	$scope.items = [
+						{
+							'titulo': 'slide 1',
+							'subtitulo':'subtitulo 1',
+							'text_btn': 'txt btn 1',
+							'clase' : 'active',
+							'img': 'https://animostyle.files.wordpress.com/2012/11/lace-collage.jpg',
+						},
+						{
+							'titulo': 'slide 2',
+							'subtitulo':'subtitulo 2',
+							'text_btn': 'txt btn 2',
+							'img': 'https://artbecomesyou.files.wordpress.com/2011/06/colour-blocking1.jpg?w=1200&h=400&crop=1',
+						},
+
+						{
+							'titulo': 'slide 3',
+							'subtitulo':'subtitulo 3',
+							'text_btn': 'txt btn 3',
+							'img': 'http://carriebradshawlied.com/wp-content/uploads/2015/02/pink-1200x400.png',
+						},
+
+						
+						
+					];
+	
+	
+
+
+}]);
+
+-->

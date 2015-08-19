@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+	<link href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+	<style type="text/css">
+		body{
+			background-color: #fff;
+			color: white;
+			background-image: url("{% static 'assets/img/bg.jpg' %}");
+			-webkit-background-size: cover;
+  			-moz-background-size: cover;
+  			-o-background-size: cover;
+  			background-size: cover;
+		}
+
+		.row {
+		 margin-right: 0px !important; 
+		 margin-left: 0px !important; 
+		}
+
+		#logo{
+			margin-top: 3%;
+			font-size: 20px;
+			font-weight: bold;
+		}
+
+		.campo {
+			width: 80%;
+			text-align: center;
+			height: 40px;
+			color: gray;
+		}
+
+		.btn-rosa{
+			background-color: #e7314c;
+			color: white;
+			font-weight: bold;
+			border: 0px;
+		}
+		input{
+			margin-bottom: 0.09em;
+		}
+	</style>
+
+</head>
+<body> 
+	<div class="row" id="logo">
+		<div class="col-xs-12 col-sm-12 col-md-12 ">
+	  		<div class="text-center">
+	  			<img src="{% static 'assets/img/logo.png' %}">
+	  		</div>
+	  		
+	  </div>
+	  <div class="col-xs-12 col-sm-12 col-md-12 ">
+	  		<div class="text-center">
+	  			SHOE STARTS
+	  		</div>
+	  		
+	  </div>	  
+	</div>
+
+	<div class="row">
+	  <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+		  	<p class="text-center">l contrario del pensamiento popular, el texto de Lorem Ipsum no es simplemente texto aleatorio. Tiene sus raices en una pieza cl´sica de la literatura del Latin, que data del año 45 antes de Cristo, haciendo que este adquiera mas de 2000 años de antiguedad. Richard McClintock, un profesor de Latin de la Universidad de Hampden-Sydney en Virginia
+		  	<p>
+	  	</div>	  
+	</div>
+
+
+	<div class="row">
+	  <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+		  	<h4><p class="text-center">
+		  		INGRESA TUS DATOS
+		  	<p></h4>
+	  	</div>	  
+	</div>
+	
+	<div class="row">
+		<form method="POST" action="/login/registro/crear/">
+		{% csrf_token %}
+		 
+
+	  	<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+	  		<div class="text-center">
+	  			<input type="email" class="campo" placeholder="Correo" name="correo" required>
+	  		</div>	  		
+	  	</div> 
+	  	<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+	  		<div class="text-center">
+	  			<input type="password" class="campo" placeholder="Password" name="password" required>
+	  		</div>	  		
+	  	</div>
+	</div>
+
+	<br>
+	<div class="row">
+	  <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+		  	<h4><p class="text-center">
+		  		BAUTIZA TU CUENTA
+		  	<p></h4>
+	  	</div>	  
+	</div>
+
+	<div class="row">
+		<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+	  		<div class="text-center">
+	  			<input class="campo" placeholder="Nombre Tienda" name="tienda" required>
+	  		</div>	  		
+	  	</div>	 
+
+	  	<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+	  		<div class="text-center">
+	  			<button class="campo btn-rosa">CONFIRMAR</button> 
+	  		</div>	  		
+	  	</div> 
+	  	</form>
+	</div>
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	    <!-- Include all compiled plugins (below), or include individual files as needed -->
+	    <script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
+	    <script type="text/javascript" src="{% static 'assets/angular.js' %}"></script>
+	    <script type="text/javascript" src="{% static 'assets/aplicacion.js' %}"></script>
+	    <script type="text/javascript" src="{% static 'assets/services.js' %}"></script>
+	    <script type="text/javascript" src="{% static 'assets/controllers.js' %}"></script>
+</body>
+</html>
