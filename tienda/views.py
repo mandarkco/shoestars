@@ -53,6 +53,7 @@ def incluir_producto(request):
 		categoria['id'] = c.id
 		categoria['nombre'] = c.nombre
 		categoria['productos'] = []
+		categoria['imagen'] = c.imagen.url
 		productos = Producto.objects.filter(categoria_id = c.id)
 		for p in productos:
 			producto['id'] = p.id

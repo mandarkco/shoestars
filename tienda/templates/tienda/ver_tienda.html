@@ -36,6 +36,8 @@
 				color: white;
 			}
 
+			
+
 		</style>
 
 	</head>
@@ -70,8 +72,7 @@
 		
 		<div class="row">
 			<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
-				<p class="text-center">l contrario del pensamiento popular, el texto de Lorem Ipsum no es simplemente texto aleatorio. Tiene sus raices en una pieza cl´sica de la literatura del Latin, que data del año 45 antes de Cristo, haciendo que este adquiera mas de 2000 años de antiguedad. Richard McClintock, un profesor de Latin de la Universidad de Hampden-Sydney en Virginia
-					<p>
+				
 					</div>	  
 				</div>
 
@@ -83,8 +84,8 @@
 
 					<div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 col-xs-offset-3 col-sm-offset-8 Show-vistas">
 						
-							<img src="{% static 'assets/img/v1.png' %}" ng-click="vista1()"></img> 
-							<img class="v2" src="{% static 'assets/img/v2.png' %}"  ng-click="vista2()"></img>	
+							<img src="{% static 'assets/img/v2.png' %}" ng-click="vista1()"></img> 
+							<img class="v2" src="{% static 'assets/img/v1.png' %}"  ng-click="vista2()"></img>	
 							  	
 					</div>  
 				</div>
@@ -92,7 +93,7 @@
 				<div class="row Categorias">
 					{% for c in categorias %}
 					<div class="col-xs-3 col-sm-3 col-md-1 col-lg-1" >	  	
-						<img class="img-categoria" src="{% static 'assets/img/categoria.png' %}" ng-click="buscar_productos({{c.id}})" ></img>{{c.nombre}}
+						<img class="img-categoria" src="{{c.imagen.url}}" ng-click="buscar_productos({{c.id}})" ></img>{{c.nombre}}
 					</div> 
 					{% endfor %} 			 
 				</div>

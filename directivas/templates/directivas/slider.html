@@ -1,6 +1,14 @@
 
 
+<style type="text/css">
+	@media (max-width: 480px) {
 
+				
+				.img-carrusel{
+					height: 14em !important;
+				}
+			 }
+</style>
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel"> 
 	<!-- Indicators -->
@@ -11,7 +19,7 @@
 	</ol>
 	<div class="carousel-inner">
 		<div class="item [[i.clase]]" ng-repeat="i in items"> 
-			<img src="[[i.img]]" style="width:100%" alt="First slide">
+			<img src="[[i.img]]" style="width:100%" alt="" class="img-carrusel">
 			<div class="container">
 				<div class="carousel-caption">
 					<h1>[[i.titulo]]</h1>

@@ -58,7 +58,7 @@ class Cliente(models.Model):
 
 class Categoria(models.Model):
 	nombre = models.CharField(max_length=50, blank = True, null = True)
-	
+	imagen = models.ImageField(upload_to='images')
 
 	def __unicode__(self):
 		return str(self.nombre)
