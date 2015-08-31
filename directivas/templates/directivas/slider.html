@@ -1,12 +1,33 @@
 
 
 <style type="text/css">
+	.titulo{
+		
+		font-weight: bold;
+		text-decoration: none !important;
+
+
+
+	}
+	.titulo h1{
+		font-size: 3em;
+		color: white !important;
+
+	}
+
+	.img-carrusel{
+		max-height: 27em;
+	}
 	@media (max-width: 480px) {
 
 				
 				.img-carrusel{
 					height: 14em !important;
 				}
+
+				.titulo h1{
+						font-size: 2em;
+					}
 			 }
 </style>
 
@@ -22,9 +43,9 @@
 			<img src="[[i.img]]" style="width:100%" alt="" class="img-carrusel">
 			<div class="container">
 				<div class="carousel-caption">
-					<h1>[[i.titulo]]</h1>
+					<a href="[[i.href]]" target="blank" class="titulo"><h1>[[i.titulo]]</h1></a>
 					<p>[[i.subtitulo]]</p>
-					<p><a class="btn btn-lg btn-primary" href="#" role="button">[[i.text_btn]]</a></p>
+					
 				</div>
 			</div>
 		</div>
