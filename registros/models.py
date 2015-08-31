@@ -58,7 +58,7 @@ class Cliente(models.Model):
 
 class Categoria(models.Model):
 	nombre = models.CharField(max_length=50, blank = True, null = True)
-	imagen = models.ImageField(upload_to='images')
+	imagen = models.CharField(max_length=500, blank = True, null = True)
 
 	def __unicode__(self):
 		return str(self.nombre)
@@ -67,10 +67,10 @@ class Categoria(models.Model):
 
 class Producto(models.Model):
 	nombre = models.CharField(max_length=50, blank = True, null = True)
-	imagen_principal = models.ImageField(upload_to='images')
-	imagen_1 = models.ImageField(upload_to='images')
-	imagen_2 = models.ImageField(upload_to='images')
-	imagen_3 = models.ImageField(upload_to='images')
+	imagen_principal = models.CharField(max_length=500, blank = True, null = True)
+	imagen_1 = models.CharField(max_length=500, blank = True, null = True)
+	imagen_2 = models.CharField(max_length=500, blank = True, null = True)
+	imagen_3 = models.CharField(max_length=500, blank = True, null = True)
 	descripcion = models.TextField(max_length=500, blank = True, null = True)
 	categoria = models.ForeignKey('Categoria')
 	valor = models.IntegerField( blank = True, null = True)
