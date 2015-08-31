@@ -1,0 +1,148 @@
+.productos {
+  margin-top: 1em;
+}
+.producto {
+  
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 1em;
+}
+.producto-incluido {
+  background-color: #008000;
+  width: 90%;
+  height: 150px;
+  margin: 0 auto;
+  margin-top: 1em;
+}
+.categoria {
+  margin-left: 1.7em;
+}
+#herramientas {
+  float: right;
+  margin-right: 1em;
+  width: 100%;
+}
+#slide {
+  margin-top: 3.5em;
+}
+#top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 60px;
+  background: none repeat scroll 0 0 #fff;
+  -webkit-box-shadow: 0 0 12px 0 rgba(0,0,0,0.25);
+  box-shadow: 0 0 12px 0 rgba(0,0,0,0.25);
+}
+#logo {
+  float: left;
+  margin-left: 3em;
+  margin-top: 1em;
+}
+.float-element p {
+  padding-top: 0.8em;
+}
+.float-element {
+  width: 4em;
+  height: 3em;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 2px 2px 2px 2px;
+ 
+  margin-top: 1em;
+  float: right;
+  margin-left: 0.2em;
+  cursor: pointer;
+}
+
+.btn-azul{
+      background-color: #3f569a;
+      color: white;
+      font-weight: bold;
+      border: 0px;
+    }
+    
+.ContainerCategorias{
+	
+	margin-top: 0.5em;
+	padding-top: 0.5em;
+	padding-bottom: 1em;
+}
+
+
+.Categoria-nombre{
+	color: black;
+  font-weight: bold;
+	margin-left: 1.1em;
+}
+
+
+.btn-rosa{
+      background-color: #e7314c;
+      color: white;
+      font-weight: bold;
+      font-size: 17px;
+      text-align: center;
+      border: 0px;
+    }
+
+.btn-gris{
+      background-color: gray;
+      color: white;
+      font-weight: bold;
+      font-size: 17px;
+      text-align: center;
+      border: 0px;
+      cursor: default;
+    }
+
+.Categorias{
+  margin-top: 1em;
+  -webkit-box-shadow: 0px 2px 7px -2px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 2px 7px -2px rgba(0,0,0,0.75);
+box-shadow: 0px 2px 7px -2px rgba(0,0,0,0.75);
+}
+
+.Filtro{
+  background-color: #1d1d1b;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+}
+
+.Show-categorias{
+  color: white;
+  font-weight: bold;
+}
+
+.Show-vistas{
+  margin-top: 0.5em;
+}
+
+.img-categoria{
+  float: left;
+  width: 70px;
+  height: 70px;
+}
+
+.v2{
+  margin-top: 2.8px;
+}
+.margin-top{
+  margin-top: 0.5em;
+}
+
+.pago{
+  display: none;
+}
+
+.final-compra{
+  display: none;
+}
+
+.float-left{
+  float: left;
+}
