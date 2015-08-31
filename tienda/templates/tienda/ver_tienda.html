@@ -93,7 +93,7 @@
 				<div class="row Categorias">
 					{% for c in categorias %}
 					<div class="col-xs-3 col-sm-3 col-md-1 col-lg-1" >	  	
-						<img class="img-categoria" src="{{c.imagen.url}}" ng-click="buscar_productos({{c.id}})" ></img>{{c.nombre}}
+						<img class="img-categoria" src="{{c.imagen}}" ng-click="buscar_productos({{c.id}})" ></img>{{c.nombre}}
 					</div> 
 					{% endfor %} 			 
 				</div>
@@ -110,10 +110,10 @@
 								{% if p.disponible %}
 								<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 product {{p.categoria.id}}" >
 									<div class="producto">
-										<img class="img-responsive" src="{{p.imagen_principal.url}}">
+										<img class="img-responsive" src="{{p.imagen_principal}}">
 										
 											
-												<button class="btn-rosa text-center col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-click="set_producto('{{p.nombre}}','{{p.imagen_principal.url}}','{{p.imagen_1.url}}', '{{p.imagen_2.url}}', '{{p.imagen_3.url}}',{{tienda}}, {{p.id}}, '{{request.user.id}}')" ><h4 class="text-center" >COMPRAR</h4></button>
+												<button class="btn-rosa text-center col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-click="set_producto('{{p.nombre}}','{{p.imagen_principal}}','{{p.imagen_1}}', '{{p.imagen_2}}', '{{p.imagen_3}}',{{tienda}}, {{p.id}}, '{{request.user.id}}')" ><h4 class="text-center" >COMPRAR</h4></button>
 													
 														
 									</div>	  	
@@ -132,7 +132,7 @@
 									<div class="producto">
 										<div class="row">
 											<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-												<img class="img-responsive" src="{{p.imagen_principal.url}}">
+												<img class="img-responsive" src="{{p.imagen_principal}}">
 											</div>
 											<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 												<p>Nombre: {{ p.nombre}}</p>	
@@ -140,7 +140,7 @@
 												<p> Peso: {{p.peso}} </p>
 												<p>Precio : {{p.valor}} </p>
 													
-												<button class="btn-rosa text-center col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-click="set_producto('{{p.nombre}}','{{p.imagen_principal.url}}','{{p.imagen_1.url}}', '{{p.imagen_2.url}}', '{{p.imagen_3.url}}',{{tienda}}, {{p.id}}, '{{request.user.id}}')" ><h4 class="text-center" >COMPRAR</h4></button>
+												<button class="btn-rosa text-center col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-click="set_producto('{{p.nombre}}','{{p.imagen_principal}}','{{p.imagen_1}}', '{{p.imagen_2}}', '{{p.imagen_3}}',{{tienda}}, {{p.id}}, '{{request.user.id}}')" ><h4 class="text-center" >COMPRAR</h4></button>
 													
 												
 											</div>
@@ -216,9 +216,9 @@
 								<table class="table table-bordered">
 	      <thead>
 	        <tr>
-	          <th>#</th>
+	         
 	          <th>Fecha</th>
-	          <th>Tienda</th>
+	         
 	          <th>Producto</th>
 	          <th>Talla</th>
 	          <th>Estado</th>
@@ -226,9 +226,9 @@
 	      </thead>
 	      <tbody>
 	        <tr ng-repeat="c in compras">
-	          <th scope="row">[[c.numero]]</th>
+	         
 	          <td>[[c.fecha  | date:'MM/dd/yyyy @ h:mma' ]]</td>
-	          <td>[[c.tienda]]</td>
+	          
 	          <td>[[c.producto]]</td>
 	          <td>[[c.talla]]</td>
 	          <td>[[c.estado]]</td>

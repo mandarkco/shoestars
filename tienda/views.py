@@ -53,7 +53,7 @@ def incluir_producto(request):
 		categoria['id'] = c.id
 		categoria['nombre'] = c.nombre
 		categoria['productos'] = []
-		categoria['imagen'] = c.imagen.url
+		categoria['imagen'] = c.imagen
 		productos = Producto.objects.filter(categoria_id = c.id)
 		for p in productos:
 			producto['id'] = p.id
@@ -61,7 +61,7 @@ def incluir_producto(request):
 			producto['descripcion'] = p.descripcion
 			producto['valor'] = p.valor
 			producto['peso'] = p.peso
-			producto['imagen'] = p.imagen_principal.url
+			producto['imagen'] = p.imagen_principal
 			#print producto
 			categoria['productos'].append(producto)
 			producto = {}

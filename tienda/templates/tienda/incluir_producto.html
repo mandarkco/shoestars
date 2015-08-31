@@ -171,21 +171,21 @@
 								<table class="table table-bordered">
 	      <thead>
 	        <tr>
-	          <th>#</th>
+	          
 	          <th>Fecha</th>
 	          <th>Cliente</th>
 	          <th>Producto</th>
-	          <th>Talla</th>
+	         
 	          <th>Estado</th>
 	        </tr>
 	      </thead>
 	      <tbody>
 	        <tr ng-repeat="c in ventas">
-	          <th scope="row">[[c.numero]]</th>
+	         
 	          <td>[[c.fecha  | date:'MM/dd/yyyy @ h:mma' ]]</td>
 	          <td>[[c.cliente]]</td>
 	          <td>[[c.producto]]</td>
-	          <td>[[c.talla]]</td>
+	         
 	          <td>[[c.confirmacion_de_pago]]</td>
 	        </tr>
 	        

@@ -161,24 +161,24 @@ app.controller('slide_incluir_producto', ['$scope', 'defaultService', function (
 
 	$scope.items = [
 						{
-							'titulo': 'slide 1',
-							'subtitulo':'subtitulo 1',
-							'text_btn': 'txt btn 1',
+							'titulo': 'Lace up Sandals, pisadas de Gladiadoras',
+							'subtitulo':'',
+							'href': 'http://blog.yoamoloszapatos.com/shoes-zapatos/lace-up-sandals-pisadas-de-gladiadoras/',
 							'clase' : 'active',
-							'img': 'https://animostyle.files.wordpress.com/2012/11/lace-collage.jpg',
+							'img': 'http://blogyoamoloszapatoscom.c.presscdn.com/wp-content/uploads/2015/04/gladiadoras-dest.jpg',
 						},
 						{
-							'titulo': 'slide 2',
-							'subtitulo':'subtitulo 2',
-							'text_btn': 'txt btn 2',
-							'img': 'https://artbecomesyou.files.wordpress.com/2011/06/colour-blocking1.jpg?w=1200&h=400&crop=1',
+							'titulo': 'Una flor en tu closet. Primavera-Verano 2015',
+							'subtitulo':'',
+							'href': 'http://blog.yoamoloszapatos.com/estilo-de-vida-lifestyle/una-flor-en-tu-closet-primavera-verano-2015/',
+							'img': 'http://blogyoamoloszapatoscom.c.presscdn.com/wp-content/uploads/2015/04/printtt-desta.jpg',
 						},
 
 						{
-							'titulo': 'slide 3',
-							'subtitulo':'subtitulo 3',
-							'text_btn': 'txt btn 3',
-							'img': 'http://carriebradshawlied.com/wp-content/uploads/2015/02/pink-1200x400.png',
+							'titulo': 'T Strap, elegancia y comodidad',
+							'subtitulo':'',
+							'href': 'http://blog.yoamoloszapatos.com/shoes-zapatos/t-strap-elegancia-y-comodidad/',
+							'img': 'http://blogyoamoloszapatoscom.c.presscdn.com/wp-content/uploads/2015/04/destacada-t.jpg',
 						},
 
 						
