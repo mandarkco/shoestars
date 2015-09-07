@@ -99,7 +99,7 @@ def ver_tienda(request, nombre):
 		try:
 			perfil = PerfilCliente.objects.get(usuario = request.user)
 			return render(request, 'tienda/ver_tienda.html', {'tallas':tallas, 'perfil':perfil, 'nombre':tienda[0].nombre, 'tienda':tienda[0].id, 'categorias': categorias, 'productos': tienda[0].productos.all()})
-		except PerfilCliente.DoesNotExist:
+		except Exception as e :
 			return render(request, 'tienda/ver_tienda.html', {'tallas':tallas, 'nombre':tienda[0].nombre, 'tienda':tienda[0].id, 'categorias': categorias, 'productos': tienda[0].productos.all()})
 	else:
 		return redirect('/')
