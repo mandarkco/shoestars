@@ -59,18 +59,18 @@
 						<h3 ng-click="" class="Show-categorias">CATEGORÍAS</h3> 
 					</div>  
 
-					<div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 col-xs-offset-3 col-sm-offset-8 Show-vistas">
+					<div class="col-xs-5 col-sm-5 col-md-2 col-lg-2 col-xs-offset-2 col-sm-offset-8 Show-vistas">
 						
-							<img src="{% static 'assets/img/v2.png' %}" ng-click="vista1()"></img> 
+							<img class="v1" src="{% static 'assets/img/v2.png' %}" ng-click="vista1()"></img> 
 							<img class="v2" src="{% static 'assets/img/v1.png' %}"  ng-click="vista2()"></img>	
 							  	
 					</div>  
-	</div>
+				</div>
 
 	<div class="row Categorias">
 		{% for c in categorias %}
 			<div class="col-xs-3 col-sm-3 col-md-1 col-lg-1" >	
-				<img class="img-categoria" src="{{c.imagen}}" ng-click="buscar_categoria({{c.id}})" ></img>{{c.nombre}} 
+				<img class="img-categoria" src="{{c.imagen}}" ng-click="buscar_categoria({{c.id}})" ></img><p class="categoria">{{c.nombre}}</p> 
 			 	
 			</div>  	
 		{% endfor %}		 
@@ -148,10 +148,7 @@
         <div class="fb-share-button" data-href="https://yoamoloszapatos.com/" data-layout="button"></div>
 
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-       
-      </div>
+      
     </div>
   </div>
 </div>
@@ -166,11 +163,12 @@
 							</div>
 							<div class="modal-body">
 								{% if request.user.is_authenticated %}
-								<h2> Bienvenido {{request.user.username}} </h2>
-								<h3> Mis Ventas</h3>
-								<table class="table table-bordered">
+								<h2 class="text-center gris lato"> Bienvenid@ </h2>
+								<h2 class="text-center gris lato"> {{request.user.username}} </h2>
+								
+								<table class="table table-bordered ">
 	      <thead>
-	        <tr>
+	        <tr class="header-table">
 	          
 	          <th>Fecha</th>
 	          <th>Cliente</th>
@@ -227,10 +225,7 @@
 								</div>
 								{% endif %}
 							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-
-							</div>
+							
 						</div>
 					</div>
 				</div>

@@ -34,6 +34,7 @@
 				border-radius: 0;
 				background-color: rgb(225, 49, 49);
 				color: white;
+				width: 100%;
 			}
 
 			
@@ -84,7 +85,7 @@
 
 					<div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 col-xs-offset-3 col-sm-offset-8 Show-vistas">
 						
-							<img src="{% static 'assets/img/v2.png' %}" ng-click="vista1()"></img> 
+							<img class="v1" src="{% static 'assets/img/v2.png' %}" ng-click="vista1()"></img> 
 							<img class="v2" src="{% static 'assets/img/v1.png' %}"  ng-click="vista2()"></img>	
 							  	
 					</div>  
@@ -93,7 +94,7 @@
 				<div class="row Categorias">
 					{% for c in categorias %}
 					<div class="col-xs-3 col-sm-3 col-md-1 col-lg-1" >	  	
-						<img class="img-categoria" src="{{c.imagen}}" ng-click="buscar_productos({{c.id}})" ></img>{{c.nombre}}
+						<img class="img-categoria" src="{{c.imagen}}" ng-click="buscar_productos({{c.id}})" ></img><p class="categoria">{{c.nombre}}</p>
 					</div> 
 					{% endfor %} 			 
 				</div>
@@ -193,10 +194,7 @@
 
         <div class="fb-share-button" data-href="https://yoamoloszapatos.com/" data-layout="button"></div>
 							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-
-							</div>
+								
 						</div>
 					</div>
 				</div>
@@ -211,11 +209,12 @@
 							</div>
 							<div class="modal-body">
 								{% if request.user.is_authenticated %}
-								<h2> Bienvenido {{request.user.username}} </h2>
-								<h3> Mis Compras</h3>
+								<h2 class="text-center gris lato"> Bienvenid@ </h2>
+								<h2 class="text-center gris lato"> {{request.user.username}} </h2>
+								
 								<table class="table table-bordered">
 	      <thead>
-	        <tr>
+	        <tr class="header-table">
 	         
 	          <th>Fecha</th>
 	         
@@ -272,10 +271,7 @@
 								</div>
 								{% endif %}
 							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-
-							</div>
+							
 						</div>
 					</div>
 				</div>
@@ -300,7 +296,7 @@
 									</div>
 									<div class="col-xs-12 col-md-6 col-lg-6 " >
 										<div class="col-xs-12 col-md-12 col-lg-12 " >
-											<h1>[[nombre_producto]]</h1>
+											<h1 class="gris">[[nombre_producto]]</h1>
 										</div>
 										<div class="col-xs-4 col-md-4 col-lg-4" >
 											<img class="img-responsive" src="[[imagen_1]]">
@@ -327,16 +323,16 @@
 								</div>
 
 								<div class="row">
-									<h3>Complete la siguiente informacion para realizar la compra</h3>
-									<div class="col-xs-12 col-md-4 col-lg-4" >
-										<h3>1. Autenticacion</h3>
+									<h3 class="gris leto">Complete la siguiente informacion para realizar la compra</h3>
+									<div class="col-xs-12 col-md-4 col-lg-4 gris leto" >
+										<h3 class="">1. Autenticacion</h3>
 										{% if user.is_authenticated %}
-										<h3>Bienvenido {{request.user.username}}<h3>
+										<h3 class="">Bienvenido {{request.user.username}}<h3>
 											<a href="/login/salir/">Salir</a>
 											{% else %}
 											<h3 ng-bind="msj_cliente"></h3>
-											<form id="login">
-												<div class="form-group">
+											<form id="login gris leto">
+												<div class="form-group" >
 													<label for="exampleInputEmail1">Correo electronico</label>
 													<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email" ng-model="correo">
 												</div>
@@ -352,30 +348,30 @@
 
 											{%endif%}
 										</div>
-										<div class="col-xs-12 col-md-4 col-lg-4" >
-											<h3>2. Informacion de envio
+										<div class="col-xs-12 col-md-4 col-lg-4 ggris leto" >
+											<h3 class="gris leto">2. Informacion de envio
 
 											</h3>
 
 											{%if perfil %}
 												<form>
 												<div class="form-group">
-													<label for="exampleInputEmail1">Pais</label>
-													<input id="pais" type="input" class="form-control"   placeholder="Pais" value='{{perfil.pais}}'>
+													<label class="gris leto" for="exampleInputEmail1 ">Pais</label>
+													<input  id="pais" type="input" class="gris leto form-control"   placeholder="Pais" value='{{perfil.pais}}'>
 												</div>
 												<div class="form-group">
-													<label for="exampleInputPassword1">Ciudad</label>
-													<input type="input" class="form-control" id="ciudad" placeholder="ciudad"
+													<label class="gris leto" for="exampleInputPassword1">Ciudad</label>
+													<input type="input" class="form-control gris leto" id="ciudad" placeholder="ciudad"
 													value='{{perfil.ciudad}}' >
 												</div>
 
 												<div class="form-group">
-													<label for="exampleInputPassword1">Direccion</label>
-													<input id="direccion" type="text" class="form-control" id="exampleInputPassword1" placeholder="direccion" value='{{perfil.direccion}}' >
+													<label class="gris leto" for="exampleInputPassword1">Direccion</label>
+													<input id="direccion" type="text" class="gris leto form-control" id="exampleInputPassword1" placeholder="direccion" value='{{perfil.direccion}}' >
 												</div>
 												<div class="form-group">
-													<label for="exampleInputPassword1">Telefono</label>
-													<input id="telefono" type="text" class="form-control"  placeholder="telefono" value='{{perfil.telefono}}' >
+													<label class="gris leto" for="exampleInputPassword1">Telefono</label>
+													<input id="telefono" type="text" class="gris leto form-control"  placeholder="telefono" value='{{perfil.telefono}}' >
 												</div>
 
 
@@ -410,7 +406,7 @@
 
 											
 										</div>
-										<div class="col-xs-12 col-md-4 col-lg-4" >
+										<div class="col-xs-12 col-md-4 col-lg-4 gris leto" >
 											<h3>3. Metodo de pago</h3>
 												<h3>Contra entrega</h3>
 												<button type="submit" class="btn btn-comprar" ng-click="pagar()"><h4 class="text-center" >COMPRAR</h4></button>
@@ -421,10 +417,7 @@
 
 									
 
-									<div class="modal-footer">
-										<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-
-									</div>
+									
 								</div>
 							</div>
 						</div>

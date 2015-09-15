@@ -1,3 +1,31 @@
+
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(http://fonts.gstatic.com/s/lato/v11/1YwB1sO8YE1Lyjf12WNiUA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+
+body{
+  font-family: Lato !important;
+}
+
+.lato{
+  font-family: Lato !important;
+}
+
+h3{   
+  font-family: Lato !important;
+}
+
+.gris{
+  color:#a89a8f;
+}
+
+
 .productos {
   margin-top: 1em;
 }
@@ -14,12 +42,11 @@
   margin: 0 auto;
   margin-top: 1em;
 }
-.categoria {
-  margin-left: 1.7em;
-}
+
 #herramientas {
+  background-color: black;
   float: right;
-  margin-right: 1em;
+ 
   width: 100%;
 }
 #slide {
@@ -40,7 +67,7 @@
 }
 #logo {
   float: left;
-  margin-left: 3em;
+  margin-left: 1.4em;
   margin-top: 1em;
 }
 .float-element p {
@@ -52,10 +79,10 @@
   color: #fff;
   font-weight: bold;
   border-radius: 2px 2px 2px 2px;
- 
+  margin-right: 1em;
   margin-top: 1em;
   float: right;
-  margin-left: 0.2em;
+   margin-left: -1.8em;
   cursor: pointer;
 }
 
@@ -67,22 +94,22 @@
     }
     
 .ContainerCategorias{
-	
-	margin-top: 0.5em;
-	padding-top: 0.5em;
-	padding-bottom: 1em;
+  
+  margin-top: 0.5em;
+  padding-top: 0.5em;
+  padding-bottom: 1em;
 }
 
 
 .Categoria-nombre{
-	color: black;
+  color: black;
   font-weight: bold;
-	margin-left: 1.1em;
+  margin-left: 1.1em;
 }
 
 
 .btn-rosa{
-      background-color: #e7314c;
+      background-color: #e6304b;
       color: white;
       font-weight: bold;
       font-size: 17px;
@@ -120,6 +147,8 @@ box-shadow: 0px 2px 7px -2px rgba(0,0,0,0.75);
 
 .Show-vistas{
   margin-top: 0.5em;
+
+
 }
 
 .img-categoria{
@@ -128,9 +157,22 @@ box-shadow: 0px 2px 7px -2px rgba(0,0,0,0.75);
   height: 70px;
 }
 
+
 .v2{
-  margin-top: 2.8px;
+  margin-top: 1.1px;
+  float: right;
+  margin-right: 0.5em;
+ 
 }
+
+.v1{
+ 
+   
+   float: right;
+}
+
+
+
 .margin-top{
   margin-top: 0.5em;
 }
@@ -146,3 +188,63 @@ box-shadow: 0px 2px 7px -2px rgba(0,0,0,0.75);
 .float-left{
   float: left;
 }
+
+.modal-header{
+  background-color: #e6304b;
+  color: white;
+  font-family: Lato !important;
+}
+
+.header-table{
+  background-color: black;
+  color: white;
+  font-family: Lato !important;
+}
+
+.header-table th:hover{
+   color: #e6304b;
+}
+
+.carousel-caption{
+  background-color: rgba(0, 0, 0, .4);
+
+}
+
+.categoria{
+ 
+  font-weight: bold;
+  
+
+
+}
+
+
+
+@media (max-width: 767px) {
+  .v2{
+    
+   
+  }
+
+  .v1{
+    
+    margin-right: -2em;
+  }
+
+  
+
+  .Show-vistas{
+    
+  }
+
+  .carousel-caption a h1{
+  
+  font-size: 1.3em;
+  
+    }
+
+    .categoria{
+     
+        
+    }
+ }
