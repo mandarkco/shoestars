@@ -23,14 +23,14 @@
 	<div id="top">
 		<div id="herramientas">	
 				<div id="logo">
-					<img src="https://www.yoamoloszapatos.com/images/logo.png">
+					<img class="icono-superior" src="{% static 'assets/icons/logo.png' %}">
 				</div>		
 				<div class="float-element text-center" ng-click="mostrar_perfil_vendedor()">
-					<img src="{% static 'assets/icons/User_male_black_shape_32.png' %}">
+					<img class="icono-superior" src="{% static 'assets/icons/User_male_black_shape_32.png' %}">
 				</div>
 				
 				<div class="float-element text-center" data-toggle="modal" data-target="#compartir" data-toggle="tooltip" data-placement="bottom" title="Compartir">
-					<img src="{% static 'assets/icons/Sharethis_logo_32.png' %}">
+					<img class="icono-superior" src="{% static 'assets/icons/Sharethis_logo_32.png' %}">
 				</div>
 				
 
@@ -107,11 +107,11 @@
 						  				<img class="img-responsive" src="{{p.imagen}}">
 						  			</div>
 						  			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-						  				<p>Nombre: {{p.nombre}}</p>	
-								  		<p>Descripcion: {{p.descripcion}}</p>
-								  		<p> Peso: {{p.peso}} </p>
-								  		<p>Precio : {{p.valor}} </p>
-								  		<button class="btn-rosa text-center col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-click="agregar_producto({{p.id}})"><h4 class="text-center">AGREGAR</h4></button>	
+						  				<p class="gris">Nombre: {{p.nombre}}</p>	
+								  		<p class="gris">Descripcion: {{p.descripcion}}</p>
+								  		<p class="gris"> Peso: {{p.peso}} </p>
+								  		<p class="gris">Precio : {{p.valor}} </p>
+								  		<button class="btn-comprar-lista btn-rosa text-center col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-click="agregar_producto({{p.id}})"><h4 class="text-center">AGREGAR</h4></button>	
 						  			</div>
 						  		</div>
 						  			
