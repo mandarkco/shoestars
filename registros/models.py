@@ -22,7 +22,7 @@ class Venta(models.Model):
 	fecha_creacion = models.DateTimeField(auto_now_add=True)
 	confirmacion_de_pago = models.BooleanField(default = False)
 
-	envio = models.ForeignKey('Envio')
+	envio = models.ForeignKey('Envio', blank = True, null = True)
 
 	def __unicode__(self):
 		return self.cliente.usuario.username

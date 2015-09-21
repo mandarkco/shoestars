@@ -135,6 +135,7 @@ $scope.pagar = function(){
 			+'&direccion='+direccion+'&telefono='+telefono, function(d){
            //console.log(d)
            //alert(d)
+           $scope.informacion = d;
            
            console.log(d);
            defaultService.get('/venta/cliente/', function(d){

@@ -138,8 +138,8 @@ def crear(request):
 				venta.save()
 				return HttpResponse("venta creada con exito")
 
-			except:
-				return HttpResponse("error creando venta")
+			except Exception as e:
+				return HttpResponse("error creando venta "+str(e.args) )
 			
 		except Inventario.DoesNotExist:
 			return HttpResponse('Talla agotada' )
