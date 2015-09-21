@@ -10,6 +10,10 @@ class Tienda(models.Model):
 	def __unicode__(self):
 		return self.nombre
 
+
+
+
+
 class Venta(models.Model):
 	cliente = models.ForeignKey('Cliente')
 	tienda = models.ForeignKey('Tienda')
@@ -17,10 +21,33 @@ class Venta(models.Model):
 	talla = models.CharField(max_length=100, blank = True, null = True)
 	fecha_creacion = models.DateTimeField(auto_now_add=True)
 	confirmacion_de_pago = models.BooleanField(default = False)
-	
+
+	envio = models.ForeignKey('Envio')
 
 	def __unicode__(self):
 		return self.cliente.usuario.username
+
+
+ENVIADO = '1'
+TRANSITO = '2'
+RECIBIDO = '3'
+
+ENTRADA_CHOICES = (
+        (ENVIADO, 'ENVIADO'),
+        (TRANSITO, 'EN TRANSITO'),
+        (RECIBIDO, 'RECIBIDO'),      
+        
+    )
+
+class Envio(models.Model):
+
+	estado = models.CharField(max_length=2, choices=ENTRADA_CHOICES, default=ENVIADO)		
+	guia = models.CharField(max_length=100, blank = True, null = True)
+	fecha_creacion = models.DateTimeField(auto_now_add=True)	
+
+	def __unicode__(self):
+		return str(self.id)
+
 
 class Perfil_Vendedor(models.Model):
 	usuario = models.ForeignKey(User, null = True,  blank = True)

@@ -85,7 +85,9 @@ $scope.agregar_producto = function(id){
 	
 	defaultService.get('/services/tienda/agregar/producto/?producto='+id, function(d){
            //console.log(d)
-           alert(d)
+           $scope.informacion = d;
+           $('#informacion').modal('show');
+           //alert(d)
            console.log(d);
         }, function (e){console.log(e)
     });
@@ -132,7 +134,8 @@ $scope.pagar = function(){
 			$scope.product_id+'&talla='+talla+'&pais='+pais+'&ciudad='+ciudad
 			+'&direccion='+direccion+'&telefono='+telefono, function(d){
            //console.log(d)
-           alert(d)
+           //alert(d)
+           
            console.log(d);
            defaultService.get('/venta/cliente/', function(d){
            //console.log(d)
